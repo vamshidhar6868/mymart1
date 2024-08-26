@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk, maven, gradle, spring 
+FROM openjdk:17-jdk
 
 RUN mkdir /mymart
 
@@ -6,7 +6,7 @@ WORKDIR /mymart
 
 COPY src/main/resources/application.properties
 
-RUN mvn package -DskipTests
+RUN mvn package 
 
 COPY . .
 
