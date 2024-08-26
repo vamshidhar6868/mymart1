@@ -1,6 +1,4 @@
-FROM openjdk:17-jdk
-
-ENV PYTHONUNBUFFERED 1
+FROM openjdk:17-jdk, maven, gradle, spring 
 
 RUN mkdir /mymart
 
@@ -14,4 +12,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "Mymart-0.0.1-SNAPSHORT.jar"]
+CMD ["java", "-jar", "target", "Mymart-0.0.1-SNAPSHORT.jar"]
