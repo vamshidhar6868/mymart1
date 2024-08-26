@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/vamshidhar6868/mymart1.git']]) 
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/vamshidhar6868/mymart1.git']]) 
             }
         }
         stage('docker') {
