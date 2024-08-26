@@ -6,7 +6,7 @@ RUN mkdir /mymart
 
 WORKDIR /mymart
 
-COPY src ./src
+COPY src/main/resources/application.properties
 
 RUN mvn package -DskipTests
 
@@ -14,4 +14,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "target", "Mymart-0.0.1-SNAPSHORT.jar"]
+CMD ["java", "-jar", "Mymart-0.0.1-SNAPSHORT.jar"]
