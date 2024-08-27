@@ -7,6 +7,11 @@ pipeline {
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/vamshidhar6868/mymart1.git']]) 
             }
         }
+        stage('build') {
+            steps {
+                sh 'mvn clean package -DskipTests' 
+            }
+        }
         stage('docker') {
             steps {
                 script {
