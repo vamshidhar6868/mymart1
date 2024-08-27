@@ -4,7 +4,9 @@ RUN mkdir /mymart
 
 WORKDIR /mymart
 
-COPY src/main/resources/application.properties
+COPY pom.xml .
+
+COPY src /mymmart/src
 
 RUN mvn package 
 
