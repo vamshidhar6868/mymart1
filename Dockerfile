@@ -8,7 +8,7 @@ COPY pom.xml .
 
 COPY src /mymmart/src
 
-RUN mvn clean package -DskipTests 
+# RUN mvn clean package -DskipTests 
 
 COPY . .
 
