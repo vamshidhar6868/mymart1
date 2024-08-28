@@ -15,7 +15,7 @@ pipeline {
         stage('docker') {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'vam-cre') {
+                    withDockerRegistry(credentialsId: 'aws-cred'){
                          sh 'docker build -t vamshidharreddy06/mymart123 .'
                          sh 'docker push vamshidharreddy06/mymart123:latest'
                    }
